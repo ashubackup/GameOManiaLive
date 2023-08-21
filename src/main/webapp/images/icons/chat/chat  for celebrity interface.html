@@ -1,0 +1,200 @@
+	<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0 minimal-ui" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<title>Celebrity | Chat</title>
+    
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<link rel="stylesheet" type="text/css" href="styles/skin.css">
+<link rel="stylesheet" type="text/css" href="styles/framework.css">
+<link rel="stylesheet" type="text/css" href="styles/ionicons.min.css">
+
+<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+<script type="text/javascript" src="scripts/jquery.js"></script>
+<script type="text/javascript" src="scripts/plugins.js"></script>
+<script type="text/javascript" src="scripts/custom.js"></script>
+<style>
+.chat_article img{
+width: 30px;
+    border-radius: 63px;
+    height: 30px;
+    left: 31px;
+    top: 13px;
+}
+.header.header-dark span {
+    position: relative;
+    top: 12px;
+    left: 81px;
+    color: #fff;
+    font-weight: 500;
+}
+p.text-center.data-time {
+    text-align: center;
+    font-family: roboto;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.54);
+	margin:0;
+	padding:7px 0;
+}
+textarea.bubble_receice {
+    font-weight: normal;
+    width: 270px;
+   border-radius:25px !important;
+    background-color: #353535;
+    color: #fff;
+    padding: 10px;
+    font-size: 13px;
+	}
+.bubble_send{
+font-weight: normal;
+    width: 270px;
+   border-radius:25px !important;
+    background-color: #353535;
+    color: #fff;
+    padding: 10px;
+    font-size: 13px;
+	float:right;
+	}
+	p.msg_failed {
+    padding: 0;
+    margin: 0;
+    text-align: right;
+    color: rgba(255, 255, 255, 0.54);
+    font-size: 12px;
+}
+.plus-btn {
+    margin-left: 30px;
+    width: 25px;
+    float: left;
+    top: 0;
+    margin-right: 13px;
+}
+.plus-btn img {
+    width: 16px;
+}
+.sen-btn img {
+    width: 20px;
+    position: relative;
+    top: -15px;
+}
+.sen-btn span {
+    position: relative;
+    top: -21px;
+}
+.send_box input {
+    background: none;
+color:fff;
+}
+.send_box {
+    margin-top: 42%;
+    width: 100%;
+    background: #353535;
+    padding: 30px 0 0;
+    height: 82px;
+}
+.send_box input {
+    width: 75%;
+    float: left;
+}
+.sen-btn {
+    width: 25px;
+    float: right;
+    margin-right: 20px;
+}
+</style>
+</head>
+
+<body class="grey">
+<div id="page-transitions">
+    
+<div class="page-preloader page-preloader-dark">
+    <div class="spinner"></div>
+</div>
+    
+<div class="header header-dark">
+  
+    <a href="index.html" class="header-icon header-icon-7 back_btn">
+      <img src="images/icons/back.png"/> <div class="chat_article">
+						<img src="images/pictures/singer.jpg"/> 
+ 						
+					</div> 
+    </a>
+	<span>Lean_kid </span>
+    <a href="#" class="header-icon header-icon-4 profile_icon"><img src="images/icons/profile.png"/></a>
+    <a href="#" class="header-icon header-icon-3 search_icon"><img src="images/icons/search.png"/></a>
+    
+    
+</div>
+    
+<!-- Main Small Icon Sidebar -->
+<div class="sidebar-menu sidebar-dark">
+    <div class="sidebar-menu-scroll">
+            
+        <a   href="index.html"><img src="images/icons/1.png"/><em>Home</em></a>       
+        <a class="current-menu" href="explore.html"><img src="images/icons/2.png"/><em>Explore</em></a>      
+        <a  href="#"><img src="images/icons/3.png"/><em>Subscriptions</em></a>       
+        <a  href="#"><img src="images/icons/4.png"/><em>Chat</em></a>
+        <a  href="#"><img src="images/icons/5.png"/><em>Notification</em></a>       
+        <a  href="#"><img src="images/icons/6.png"/><em>History</em></a>      
+        <a  href="#"><img src="images/icons/7.png"/><em>Settings</em></a>
+      
+     
+    </div>
+</div>
+
+
+<div id="page-content" class="header-clear-large top_all">
+    <div id="page-content-scroll"><!--Enables this element to be scrolled -->
+
+
+		
+		<div class="suggested">
+		
+			
+			<div class="suggest_article">
+			
+			<div class="clear"></div>
+			<div class="subscriber_single">
+				<textarea rows="4" cols="50" class="bubble_receice">
+At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.
+</textarea>				
+				</div>
+				<p class="text-center data-time">Friday・15:23 </p>
+					<div class="subscriber_single">
+					<textarea rows="2" cols="50" class="bubble_send">
+At w3schools.com you will learn how to make a website
+</textarea>	
+</div>
+<p class="text-center data-time">Friday・15:23 </p>
+			<div class="subscriber_single">
+				
+					
+					<textarea rows="2" cols="50" class="bubble_send">
+At w3schools.com you will learn how to make a website
+</textarea>
+		</div>
+<p class="msg_failed">not send tap to try again	</p>		
+			
+			
+		</div>
+		
+		<div class="clear"></div>
+		</div>
+			<div class="send_box">
+			<div class="plus-btn"><img src="images/icons/add.png"/></div>
+			<input type="text" placeholder="Add text to this message"/> 
+			<div class="sen-btn"><img src="images/icons/send.png"/>
+			<span>MMS</span></div>
+			</div>
+ 
+    </div>  
+	
+</div>
+    
+<a href="#" class="back-to-top-badge"><i class="ion-android-arrow-dropup"></i>Back to Top</a>
+
+</div>
+</body>

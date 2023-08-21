@@ -1,0 +1,30 @@
+body #page-content #page-content-scroll {
+	padding-top: 20px !important;
+}
+
+body, #page-content {
+	background-color: #010100 !important;
+}
+
+.joinus .logo-join img {
+	height: 120px;
+}
+
+div#page-content {
+	margin-top: 0 !important;
+}
+
+.joinus-slider .swiper-slide img {
+	width: 100%;
+}
+
+.joinus-content {
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+@media screen and (max-width: 767px) {
+	.joinus .logo-join img {
+		height: 90px;
+	}
+}

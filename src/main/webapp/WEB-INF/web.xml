@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+  <servlet>
+    <servlet-name>Loader</servlet-name>
+    <servlet-class>gen.Loader</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet>
+    <servlet-name>home</servlet-name>
+    <jsp-file>/online.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>home</servlet-name>
+    <url-pattern>/home</url-pattern>
+  </servlet-mapping>	
+  <servlet>
+    <servlet-name>Category</servlet-name>
+    <jsp-file>/showAll.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Category</servlet-name>
+    <url-pattern>/Category</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>landing</servlet-name>
+    <jsp-file>/landing.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>landing</servlet-name>
+    <url-pattern>/landing</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>entry</servlet-name>
+    <jsp-file>/landingoffnet.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>entry</servlet-name>
+    <url-pattern>/entry</url-pattern>
+  </servlet-mapping>
+ 
+  <servlet>
+    <servlet-name>Redirect</servlet-name>
+    <jsp-file>/doiRedirect.jsp</jsp-file>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>ThanksPage</servlet-name>
+    <url-pattern>/ThanksPage</url-pattern>
+  </servlet-mapping>
+ 
+  <servlet>
+    <servlet-name>ThanksPage</servlet-name>
+    <jsp-file>/OffnetThanks.jsp</jsp-file>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>Redirect</servlet-name>
+    <url-pattern>/Redirect</url-pattern>
+  </servlet-mapping>
+  
+  <welcome-file-list>
+    <welcome-file>online.jsp</welcome-file>
+  </welcome-file-list>
+  
+  
+  
+</web-app>

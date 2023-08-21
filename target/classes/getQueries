@@ -1,0 +1,25 @@
+chkUser=select count(1) from tbl_subscription where ani='<ani>' and service_type='<servicename>' and date(next_billed_date) >= date(now())
+insertUser= insert into tbl_subscription (ani,sub_date_time,unsub_date_time,m_act,lang,service_type,status,charging_date,billing_date,default_amount,RECORDSTATUS,pack_type) values ('<ani>',now(),NULL,'WEB','e','<service_type>',NULL,NULL,NULL,3,'1','Daily')
+logging= insert into tbl_online_play (ani,url,DATETIME) values ('<ani>','<gameurl>',now())
+insertDLR= insert into tbl_dlr (ani,channel_name,status_name,svc_name,amount,campaign_id,next_billed_date,last_billed_date,type,sub_date_time,result_name) values ('<ani>','<channel_name>','<status_name>','<svc_name>','<amount>','<campaign_id>','<next_billed_date>','<last_billed_date>','<type>','<sub_date_time>','<result_name>')
+getDLR= select ani,sub_date_time,action,network,guid,subscriberid,charge,servicename,datetime,date(datetime),ref from tbl_dlr where status = 0 and type='<type>' limit 100
+Sub_Update= update tbl_subscription set m_act='<m_act>',next_billed_date='<next_billed_date>',last_billed_date='<last_billed_date>',default_amount='<amount>' where ani='<ani>' and service_type='<servicename>' and operator='<operator>'
+check_User= select count(1) from tbl_subscription where ani='<ani>' and service_type='<service_type>' and operator='<operator>'
+Sub_Insert = insert into tbl_subscription (ani,sub_date_time,unsub_date_time,m_act,lang,service_type,status,charging_date,billing_date,default_amount,RECORDSTATUS,pack_type,`next_billed_date`,`last_billed_date`,operator) values ('<ani>',now(),NULL,'<m_act>','e','<servicename>','Active',NULL,NULL,'<amount>','1','Daily','<next_billed_date>','<last_billed_date>','<operator>')
+Unsub_user= update tbl_subscription set unsub_date_time = '<datetime>',m_deact='<m_deact>',STATUS ='<action>' where ani ='<ani>' and service_type='<servicename>' and operator='<operator>'
+Insert_Unsub= insert into tbl_subscription_unsub select * from tbl_subscription where ani='<ani>' and service_type='<servicename>' and operator='<operator>'
+Delete_Sub= delete from tbl_subscription where ani='<ani>' and service_type='<servicename>' and operator='<operator>'
+Update_DLR= update tbl_dlr set status='1' where ani='<ani>' and servicename='<servicename>' and type='<type>' and network='<network>'
+Billing_Insert= insert into tbl_billing_success(ani,DEDUCTED_AMOUNT,ERRORDESC,TYPE_EVENT,MODE,SUBMODE,PROCESS_DATETIME,servicename,operator) values ('<ani>','<amount>','NULL','<type_event>','<m_act>','<m_act>',now(),'<servicename>','<operator>')
+OpticksLogging= insert into tbl_opticks_logging (click_id,isValid,reqJson,respJson,datetime,servicename) values ('<click_id>','<isValid>','<reqJson>','<respJson>',now(),'<servicename>')
+update_sub_conv= update tbl_subscription set camp_id='<camp_id>',provider='<provider>' where ani='<ani>' and service_type='<servicename>' and operator='<operator>'
+update_optick_tbl= update tbl_opticks_logging set ani='<ani>' where click_id='<id>'
+update_billing_conv= update tbl_billing_success set provider='<provider>', camp_id='<camp_id>' where ani=<ani> and servicename='<servicename>' and operator ='<operator>' order by PROCESS_DATETIME DESC limit 1
+getProvider=select provider from  tbl_conv_logs where newid = '<camp_id>'
+Billing_Insert_camp= insert into tbl_billing_success(ani,DEDUCTED_AMOUNT,ERRORDESC,TYPE_EVENT,MODE,SUBMODE,PROCESS_DATETIME,servicename,provider) values ('<ani>','<amount>','NULL','<type_event>','<m_act>','<m_act>',now(),'<servicename>','<provider>')
+getsvc= select servicename from tbl_sdp_info where productid='<guid>' and status=0
+getoper = select operator from tbl_network where network = '<network>'
+check_subUser = select count(1),date(sub_date_time) from tbl_subscription where ani='<ani>' and service_type='<service_type>' and operator='<operator>'
+getDLRSub = select ani,sub_date_time,action,network,guid,subscriberid,charge,servicename,datetime,date(datetime),ref from tbl_dlr where status = 0 and type='<type>' and action='<action>' limit 100
+getServiceDetails=select id,svc_url from tbl_service_master where svc_name ='<svc_name>'
+update_direct_sub= update tbl_subscription set m_act='<m_act>' where ani='<ani>' and service_type='<servicename>'
